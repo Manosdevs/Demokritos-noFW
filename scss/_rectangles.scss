@@ -1,22 +1,26 @@
 .rectangle-section {
 	padding: 4rem 0 0 0;
-}
-
-.rectangle {
 	display: flex;
-	align-items: flex-end;
-	justify-content: center;
-	height: 283px;
-	width: 100%;
-	margin-bottom: 0.5rem;
-	background-repeat: no-repeat;
-	background-size: cover;
+	overflow-x: hidden;
 }
 
 .rectangle-list {
-	padding-inline-start: 0;
-	display: grid;
-	grid-template-columns: 1fr;
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+}
+
+.rectangle {
+	color: $clr-light;
+	display: flex;
+
+	justify-content: center;
+	height: 283px;
+	min-width: 100%;
+	margin-bottom: 0.5rem;
+	background-repeat: no-repeat;
+	background-size: auto;
+	flex-wrap: wrap;
 }
 
 .rectangle-1 {
@@ -36,14 +40,14 @@
 }
 
 .rectangle-cap {
-	color: $clr-light;
-	margin-bottom: 2.5rem;
-
-	h5 {
+	width: 75%;
+	h6 {
 		font: normal normal normal 1.5rem/1.5rem $font-stack;
+		margin-block-end: 0;
+		margin-block-start: 0;
 	}
 
-	h6 {
+	p {
 		font: normal normal normal 1.1rem/1.5rem $font-stack;
 	}
 

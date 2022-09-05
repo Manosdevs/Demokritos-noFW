@@ -10,6 +10,7 @@ h1,
 h2,
 h3,
 h4,
+h6,
 p,
 figure,
 blockquote,
@@ -20,12 +21,20 @@ li {
   margin: 0;
 }
 
+ul {
+  list-style-type: none;
+  margin-block-start: 0;
+  margin-block-end: 0;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  padding-inline-start: 0;
+}
+
 main {
   overflow-x: hidden;
   scroll-behavior: smooth;
   display: grid;
   grid-template-columns: 1fr;
-  margin: 0 auto;
   max-width: 1478px;
 }
 
@@ -79,11 +88,11 @@ main {
   height: 24px;
 }
 
+.carousel-cont {
+  width: 100%;
+}
+
 .carousel-1 {
-  display: flex;
-  min-width: 100%;
-  margin: 0 auto;
-  justify-content: center;
   position: relative;
 }
 
@@ -101,34 +110,25 @@ main {
   scroll-snap-type: x mandatory;
 }
 
-.carousel-1 ul {
-  padding-inline-start: 0;
-  list-style: none;
-}
-
-.carousel-1 ul img {
-  max-height: 50vh;
-}
-
-.carousel-1 .button-img {
-  /* background-color: $clr-orange; */
-  /* border: 1px solid $clr-orange; */
-  /* border-radius: 50%; */
-  display: none;
-  height: 60px;
-  width: 60px;
+.carousel-1 button {
+  background-color: #ff6c2c;
+  border: 1px solid #ff6c2c;
+  border-radius: 50%;
+  height: 40px;
+  width: 40px;
   position: absolute;
+  display: flex;
   align-items: center;
   justify-content: center;
   top: 40%;
 }
 
-.carousel-1 .button-img:hover {
+.carousel-1 button:hover {
   height: 44px;
   width: 44px;
 }
 
-.carousel-1 .button-img img {
+.carousel-1 button img {
   object-fit: cover;
   object-position: center;
 }
@@ -145,80 +145,40 @@ main {
 		} */
 }
 
-.carousel-1 .car-item {
-  background-image: url("../assets/desktop/Group 169.png");
-  background-size: cover;
-  height: 40vh;
-  width: 100vw;
+.car-item {
+  background: url("../assets/desktop/Group 169.png");
+  min-width: 100vw;
+  min-height: 50vh;
   flex-shrink: 0;
   scroll-snap-align: start;
-  background-repeat: no-repeat;
-  background-position: center;
-  object-fit: contain;
-  object-position: center;
-  display: flex;
-  align-items: center;
-}
-
-.carousel-1 .car-item .car-captions {
+  gap: 2rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
   color: #ffffff;
-  display: flex;
-  flex-direction: column;
-  width: 60%;
-  margin-left: 10%;
-}
-
-.carousel-1 .car-item .car-captions h5 {
-  font: normal normal normal 1.25rem/1.25rem open-sans, sans-serif;
-  letter-spacing: 0.5px;
-  color: #ffffff;
-  opacity: 0.75;
-  padding: 0;
-  height: 1.6rem;
-  width: 75%;
-}
-
-.carousel-1 .car-item .car-captions p {
-  font: normal normal normal 1.5rem/2.25rem open-sans, sans-serif;
-  text-transform: capitalize;
-  opacity: 1;
-  color: #ffffff;
-  width: 80%;
-  height: 3.8rem;
-}
-
-.carousel-1 .car-item .car-captions button {
-  background: #ff6c2c 0% 0% no-repeat padding-box;
-  border-radius: 0.6rem;
-  color: #ffffff;
-  font: normal normal bold 1.25rem/1.25rem open-sans, sans-serif;
-  width: 15rem;
-  height: 4.5rem;
-  text-align: center;
-  margin-top: 3.5rem;
-  position: relative;
-  border: 1px solid #ff6c2c;
 }
 
 .rectangle-section {
   padding: 4rem 0 0 0;
-}
-
-.rectangle, .rectangle-1, .rectangle-2, .rectangle-3 {
   display: flex;
-  align-items: flex-end;
-  justify-content: center;
-  height: 283px;
-  width: 100%;
-  margin-bottom: 0.5rem;
-  background-repeat: no-repeat;
-  background-size: cover;
+  overflow-x: hidden;
 }
 
 .rectangle-list {
-  padding-inline-start: 0;
-  display: grid;
-  grid-template-columns: 1fr;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.rectangle, .rectangle-1, .rectangle-2, .rectangle-3 {
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  height: 283px;
+  min-width: 100%;
+  margin-bottom: 0.5rem;
+  background-repeat: no-repeat;
+  background-size: auto;
+  flex-wrap: wrap;
 }
 
 .rectangle-1 {
@@ -234,15 +194,16 @@ main {
 }
 
 .rectangle-cap {
-  color: #ffffff;
-  margin-bottom: 2.5rem;
-}
-
-.rectangle-cap h5 {
-  font: normal normal normal 1.5rem/1.5rem open-sans, sans-serif;
+  width: 75%;
 }
 
 .rectangle-cap h6 {
+  font: normal normal normal 1.5rem/1.5rem open-sans, sans-serif;
+  margin-block-end: 0;
+  margin-block-start: 0;
+}
+
+.rectangle-cap p {
   font: normal normal normal 1.1rem/1.5rem open-sans, sans-serif;
 }
 
