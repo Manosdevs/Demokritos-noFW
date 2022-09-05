@@ -1,0 +1,37 @@
+/* Colors: */
+$clr-black: #181a1f;
+$clr-orange: #ff6c2c;
+$clr-light: #ffffff;
+$font-stack: open-sans, sans-serif;
+
+//reset default browser styles
+@import 'reset';
+
+main {
+	overflow-x: hidden;
+	scroll-behavior: smooth;
+	display: grid;
+	grid-template-columns: 1fr;
+	margin: 0 auto;
+
+	max-width: 1478px;
+}
+
+.line-orange {
+	margin: 1rem 0;
+
+	border: 1px solid $clr-orange;
+	opacity: 1;
+}
+
+@import 'home';
+@import 'carous';
+@import 'rectangles';
+@import 'classes';
+@import 'teams';
+@import 'aboutus';
+@import 'contact';
+@import 'faqs';
+@import 'footer';
+@import 'extraStyles';
+/* @import 'mobile'; */

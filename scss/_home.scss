@@ -1,0 +1,45 @@
+.home-container {
+	display: grid;
+	grid-template-columns: 1fr;
+	gap: 1rem;
+	padding-left: 12px;
+	padding-right: 12px;
+	margin: 0 auto;
+	padding-top: 3rem;
+	padding-bottom: 3rem;
+
+	justify-content: center;
+
+	.home-item-1 {
+		width: 80%;
+	}
+
+	.home-item-2 {
+		justify-content: center;
+		width: 100%;
+	}
+	ul {
+		display: flex;
+		gap: 0.5rem;
+		justify-content: space-between;
+		padding-left: 12px;
+		padding-right: 12px;
+		list-style: none;
+		padding-inline-start: 0;
+
+		li {
+			color: $clr-black;
+			font-weight: bold;
+			font-size: 18px;
+			line-height: 24px;
+			font-family: $font-stack;
+			text-transform: capitalize;
+			text-align: center;
+			cursor: pointer;
+
+			letter-spacing: -0.09px;
+
+			height: 24px;
+		}
+	}
+}

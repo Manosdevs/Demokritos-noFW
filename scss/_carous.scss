@@ -1,0 +1,120 @@
+.carousel-1 {
+	display: flex;
+	min-width: 100%;
+	margin: 0 auto;
+	justify-content: center;
+	position: relative;
+	::-webkit-scrollbar {
+		display: none;
+	}
+	* {
+		scrollbar-width: none;
+	}
+	.carousel-list {
+		display: flex;
+		overflow-x: auto;
+		scroll-snap-type: x mandatory;
+	}
+
+	ul {
+		padding-inline-start: 0;
+		list-style: none;
+		img {
+			max-height: 50vh;
+		}
+	}
+
+	.button-img {
+		/* background-color: $clr-orange; */
+		/* border: 1px solid $clr-orange; */
+		/* border-radius: 50%; */
+		display: none;
+		height: 60px;
+		width: 60px;
+		position: absolute;
+
+		align-items: center;
+		justify-content: center;
+
+		top: 40%;
+		&:hover {
+			height: 44px;
+			width: 44px;
+		}
+
+		img {
+			object-fit: cover;
+			object-position: center;
+		}
+	}
+
+	.next {
+		right: 1rem;
+	}
+
+	.prev {
+		/* 	transform: rotate(180deg); */
+		left: 1rem;
+		/* 	img {
+			margin-left: 0.2rem;
+		} */
+	}
+
+	.car-item {
+		background-image: url('../assets/desktop/Group\ 169.png');
+		background-size: cover;
+		height: 40vh;
+		width: 100vw;
+		flex-shrink: 0;
+		scroll-snap-align: start;
+		background-repeat: no-repeat;
+		background-position: center;
+		object-fit: contain;
+		object-position: center;
+		display: flex;
+		align-items: center;
+
+		.car-captions {
+			color: $clr-light;
+			display: flex;
+
+			flex-direction: column;
+			width: 60%;
+			margin-left: 10%;
+
+			h5 {
+				font: normal normal normal 1.25rem/1.25rem $font-stack;
+				letter-spacing: 0.5px;
+				color: $clr-light;
+				opacity: 0.75;
+				padding: 0;
+
+				height: 1.6rem;
+				width: 75%;
+			}
+
+			p {
+				font: normal normal normal 1.5rem/2.25rem $font-stack;
+				text-transform: capitalize;
+				opacity: 1;
+				color: $clr-light;
+				width: 80%;
+
+				height: 3.8rem;
+			}
+			button {
+				background: $clr-orange 0% 0% no-repeat padding-box;
+				border-radius: 0.6rem;
+				color: $clr-light;
+				font: normal normal bold 1.25rem/1.25rem $font-stack;
+				width: 15rem;
+				height: 4.5rem;
+				text-align: center;
+				margin-top: 3.5rem;
+				position: relative;
+
+				border: 1px solid $clr-orange;
+			}
+		}
+	}
+}
