@@ -2,61 +2,93 @@
 	padding: 4rem 0 0 0;
 	display: flex;
 	overflow-x: hidden;
+	width: 100%;
+	display: flex;
+	margin: 0 auto;
+	justify-content: center;
+
+	@media (min-width: 40rem) {
+		width: 90%;
+	}
+}
+
+.rectangle-grid {
+	display: grid;
+	grid-template-columns: 1fr;
+	width: 100%;
 }
 
 .rectangle-list {
 	display: flex;
 	flex-direction: column;
 	width: 100%;
-}
 
-.rectangle {
-	color: $clr-light;
-	display: flex;
-
-	justify-content: center;
-	height: 283px;
-	min-width: 100%;
-	margin-bottom: 0.5rem;
-	background-repeat: no-repeat;
-	background-size: auto;
-	flex-wrap: wrap;
-}
-
-.rectangle-1 {
-	@extend .rectangle;
-
-	background-image: url('/assets/desktop/Group\ 151.png');
-}
-
-.rectangle-2 {
-	@extend .rectangle;
-
-	background-image: url('/assets/desktop/Group\ 152.png');
-}
-.rectangle-3 {
-	@extend .rectangle;
-	background-image: url('/assets/desktop/Group\ 153.png');
-}
-
-.rectangle-cap {
-	width: 75%;
-	h6 {
-		font: normal normal normal 1.5rem/1.5rem $font-stack;
-		margin-block-end: 0;
-		margin-block-start: 0;
+	@media (min-width: 40rem) {
+		width: 100%;
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: 0.5rem;
 	}
 
-	p {
-		font: normal normal normal 1.1rem/1.5rem $font-stack;
-	}
-
-	button {
-		background: #7c7c79 0% 0% no-repeat padding-box;
+	.rectangle {
 		color: $clr-light;
-		width: 137px;
-		height: 39px;
-		border: 1px solid #7c7c79;
-		margin-top: 2rem;
+		display: flex;
+
+		justify-content: center;
+		height: 283px;
+
+		margin-bottom: 0.5rem;
+		background-repeat: no-repeat;
+		background-size: auto;
+		flex-wrap: wrap;
+		align-items: flex-end;
+		background-size: cover;
+	}
+
+	.rectangle-1 {
+		@extend .rectangle;
+
+		background-image: url('/assets/desktop/Group\ 151.png');
+	}
+
+	.rectangle-2 {
+		@extend .rectangle;
+
+		background-image: url('/assets/desktop/Group\ 152.png');
+	}
+	.rectangle-3 {
+		@extend .rectangle;
+		background-image: url('/assets/desktop/Group\ 153.png');
+	}
+
+	.rectangle-cap {
+		width: 75%;
+		display: flex;
+
+		flex-direction: column;
+		gap: 2rem;
+		align-items: center;
+		margin-bottom: 2rem;
+
+		h6 {
+			font: normal normal normal 1.5rem/1.5rem $font-stack;
+			margin-block-end: 0;
+			margin-block-start: 0;
+		}
+
+		p {
+			font: normal normal normal 1.1rem/1.5rem $font-stack;
+		}
+
+		button {
+			background: #7c7c79 0% 0% no-repeat padding-box;
+			color: $clr-light;
+			width: 137px;
+			height: 39px;
+			border: 1px solid #7c7c79;
+			font: $font-stack;
+			font-size: 1rem;
+			line-height: 1.5rem;
+		}
 	}
 }

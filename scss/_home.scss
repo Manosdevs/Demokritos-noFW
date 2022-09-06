@@ -10,6 +10,11 @@
 
 	justify-content: center;
 
+	@media (min-width: 40rem) {
+		grid-template-columns: repeat(2, 1fr);
+		gap: 2rem;
+	}
+
 	.home-item-1 {
 		width: 80%;
 	}
@@ -26,6 +31,10 @@
 		padding-right: 12px;
 		list-style: none;
 		padding-inline-start: 0;
+
+		@media (min-width: 40rem) {
+			gap: 1rem;
+		}
 
 		li {
 			color: $clr-black;

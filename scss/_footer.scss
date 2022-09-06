@@ -1,5 +1,18 @@
 .footer {
 	background-color: $clr-black;
+	display: grid;
+	grid-template-columns: 1fr;
+
+	.footer-row {
+		display: grid;
+		grid-template-columns: 1fr;
+
+		@media (min-width: 40rem) {
+			display: flex;
+			justify-content: space-around;
+			align-items: center;
+		}
+	}
 
 	.logo {
 		padding: 1.5rem 2.25rem;
@@ -7,27 +20,27 @@
 
 	.link-list {
 		padding: 1.5rem 2.25rem;
-
-		ul {
-			gap: 0.75rem;
-		}
 	}
-
-	.orange-space {
-		height: 59px;
-		width: 100%;
-		background-color: $clr-orange;
-		margin: 0 !important;
+	ul {
+		gap: 0.75rem;
+		display: flex;
 	}
+}
 
-	.copyright {
-		font-family: $font-stack;
-		font-size: 1rem;
-		line-height: 1.5rem;
-		letter-spacing: 0.75px;
+.orange-space {
+	height: 59px;
+	width: 100%;
+	background-color: $clr-orange;
+	margin: 0 !important;
+}
 
-		color: $clr-light;
-		text-align: center;
-		padding: 2rem;
-	}
+.copyright {
+	font-family: $font-stack;
+	font-size: 1rem;
+	line-height: 1.5rem;
+	letter-spacing: 0.75px;
+
+	color: $clr-light;
+	text-align: center;
+	padding: 2rem;
 }

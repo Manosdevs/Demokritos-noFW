@@ -2,16 +2,27 @@
 $clr-black: #181a1f;
 $clr-orange: #ff6c2c;
 $clr-light: #ffffff;
-$font-stack: open-sans, sans-serif;
+$font-stack: 'open-sans', sans-serif;
 
 //reset default browser styles
 @import 'reset';
+
+button {
+	cursor: pointer;
+}
+
+.centering {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
 
 main {
 	overflow-x: hidden;
 	scroll-behavior: smooth;
 	display: grid;
 	grid-template-columns: 1fr;
+	margin: 0 auto;
 
 	max-width: 1478px;
 }
@@ -33,4 +44,3 @@ main {
 @import 'faqs';
 @import 'footer';
 @import 'extraStyles';
-/* @import 'mobile'; */

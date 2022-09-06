@@ -5,8 +5,23 @@
 	padding-left: 2.2rem;
 	padding-right: 2.2rem;
 
+	@media (min-width: 40rem) {
+		padding-left: 0;
+		padding-right: 0;
+	}
+
+	.rectangle-grid {
+		display: grid;
+		grid-template-columns: 1fr;
+
+		@media (min-width: 43rem) {
+			grid-template-columns: repeat(2, 1fr);
+		}
+	}
+
 	header {
 		overflow-y: hidden;
+		flex-direction: column;
 
 		h3 {
 			font: normal normal normal 3rem/1.5rem $font-stack;
@@ -31,39 +46,45 @@
 }
 
 .class-rectangle {
-	height: 486px;
-	padding-left: 2.25rem;
-	padding-right: 2.25rem;
+	height: 243px;
+	display: flex;
+	flex-direction: column-reverse;
+
+	@media (min-width: 40rem) {
+		height: 450px;
+	}
+
 	* {
 		padding: 0 !important;
 	}
-	.class-rect-1 {
-		background-image: url('/assets/desktop/Mask\ Group\ 7.png');
-		background-repeat: no-repeat;
-		background-size: cover;
-	}
+}
+.class-rect-1 {
+	background-image: url('/assets/desktop/Mask\ Group\ 7.png');
+	background-repeat: no-repeat;
+	background-size: cover;
+}
 
-	.class-rect-2 {
-		background-image: url('/assets/desktop/Mask\ Group\ 8.png');
-		background-repeat: no-repeat;
-		background-size: cover;
-	}
-	.class-rect-3 {
-		background-image: url('/assets/desktop/Mask\ Group\ 9.png');
-		background-repeat: no-repeat;
-		background-size: cover;
-	}
+.class-rect-2 {
+	background-image: url('/assets/desktop/Mask\ Group\ 8.png');
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+.class-rect-3 {
+	background-image: url('/assets/desktop/Mask\ Group\ 9.png');
+	background-repeat: no-repeat;
+	background-size: cover;
+}
 
-	.class-rect-4 {
-		background-image: url('/assets/desktop/Mask\ Group\ 10.png');
-		background-repeat: no-repeat;
-		background-size: cover;
-	}
+.class-rect-4 {
+	background-image: url('/assets/desktop/Mask\ Group\ 10.png');
+	background-repeat: no-repeat;
+	background-size: cover;
 }
 
 .rect-cap {
 	height: 25%;
 	opacity: 1;
+	width: 100%;
 
 	display: flex;
 	align-items: center;
